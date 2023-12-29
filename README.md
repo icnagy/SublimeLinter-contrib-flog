@@ -22,9 +22,13 @@ In order for `flog` to be executed by SublimeLinter, you must ensure that its pa
 - SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
 - Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
-Example settings:
+Additional SublimeLinter-contrib-flog settings:
 
-`threshold` is a float limit above which a method is marked with error.
+|Setting|Description    |
+|:------|:--------------|
+|threshold | (float) Limit above which a method is marked with error. |
+
+Example:
 
 ```json
   "flog": {
