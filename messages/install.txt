@@ -2,5 +2,32 @@ SublimeLinter-contrib-flog
 -------------------------------
 This linter plugin for SublimeLinter provides an interface to flog.
 
+Make sure `flog` is installed before using this plug-in (https://github.com/seattlerb/flog).
+
+Example configuration:
+
+```
+  "flog": {
+    "disable": false,
+    "threshold": 12.0,
+    "styles": [
+      {
+        "scope": "region.redish markup.warning.sublime_linter",
+        "types": ["error"]
+      },
+      {
+        "scope": "region.yellowish markup.warning.sublime_linter",
+        "types": ["warning"]
+      },
+      {
+        "priority": 1,
+        "icon": "triangle",
+        "mark_style": "fill",
+        "annotation": "{linter}:{msg}",
+      }
+    ]
+  },
+```
+
 For more information, please see:
 https://github.com/icnagy/SublimeLinter-contrib-flog
