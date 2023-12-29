@@ -9,7 +9,7 @@ class Flog(RubyLinter):
         'threshold': 12.0
     }
 
-    cmd = ('flog', '--blame', '--methods-only', '${file}')
+    cmd = ('flog', '${file}')
     regex = (
         r'\s*(?P<message>[\d\.]+):[^/]+(?P<filename>.+):(?P<line>\d+)-(?P<end_line>\d+)'
     )
