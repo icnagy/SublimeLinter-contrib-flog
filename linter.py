@@ -5,7 +5,8 @@ from SublimeLinter.lint import RubyLinter, LintMatch
 class Flog(RubyLinter):
 
     defaults = {
-        'selector': 'source.ruby'
+        'selector': 'source.ruby',
+        'threshold': 12.0
     }
 
     cmd = ('flog', '--blame', '--methods-only', '${file}')
@@ -18,6 +19,6 @@ class Flog(RubyLinter):
         """Add near detail to error dict."""
 
         error = super().split_match(match)
-        error['error_type'] = 'error' if float(error['message']) > 12.0 else 'warning'
+        error['error_type'] = 'error' if float(error['message']) > self.settings.get('threshold') else 'warning'
 
         return error
