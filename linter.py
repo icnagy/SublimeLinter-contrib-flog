@@ -6,10 +6,11 @@ class Flog(RubyLinter):
 
     defaults = {
         'selector': 'source.ruby',
+        'executable': 'flog'
         'threshold': 12.0
     }
 
-    cmd = ('flog', '${temp_file}')
+    cmd = ('${executable}', '${args}', '${temp_file}')
     regex = (
         r'\s*(?P<message>[\d\.]+):[^/]+(?P<filename>.+):(?P<line>\d+)-(?P<end_line>\d+)'
     )
