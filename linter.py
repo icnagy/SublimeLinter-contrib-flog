@@ -6,7 +6,7 @@ class Flog(RubyLinter):
 
     defaults = {
         'selector': 'source.ruby',
-        'executable': 'flog'
+        'executable': 'flog',
         'threshold': 12.0
     }
 
